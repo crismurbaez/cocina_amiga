@@ -1,0 +1,75 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: Sacramento, sans-serif;
+    font-size: 35px;
+    padding: 0px 50px 0px 50px;
+}
+
+.logo {
+    z-index: 2;
+    position: relative;
+    margin-top: 10px;
+    width: 150px;
+    border-radius: 100px;
+    border-color: var(--color-primary-light);
+    border-style: ridge;
+    border-width: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-primary-light);
+}
+
+.active {
+    padding: 10px 10px 30px 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 70%, 0 100%);
+    background: var(--color-secundary-light);
+    color: var(--color-text-secundary-light);
+}
+
+.link {
+    padding: 10px 10px 30px 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 70%, 0 100%);
+    position: relative;
+}
+
+.link ::after {
+    content: '';
+    position: absolute;
+    bottom: 27px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary-light);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* agrega una línea vertical encima de la página
+luego agregarle la animación del scrolling */
+&:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary-light);
+    will-change: contents;
+    /* terminar de completar con los datos que faltan */
+    transform: scaleX(1);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}

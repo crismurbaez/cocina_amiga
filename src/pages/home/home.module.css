@@ -1,0 +1,151 @@
+.home {
+    /* variable que indica ubicación y medidas carousel 
+    y todas las secciones subsiguientes
+    */
+    --top-carousel: 100px;
+    --height-carousel: 500px;
+    /* debe sumarse los dos anteriores para obtener este */
+    --top-made: 600px;
+    /* la ubicación de las flechas, es la mitad de la altura del carousel
+    menos la mitad de la altura de la flecha
+    */
+    --ubication-arrows: 225px;
+}
+
+.caroussel {
+    /* produce la ubicación del carousel posicionado de acuerdo al navbar */
+    z-index: 1;
+    position: absolute;
+    top: var(--top-carousel);
+    width: 100vw;
+    height: var(--height-carousel);
+}
+
+.circlesPosition {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.circleCaroussel {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-quintary-light);
+    border-radius: 50px;
+}
+
+.circleCarousselActive {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-primary-light);
+    border-radius: 50px;
+}
+
+
+.decorationBackground {
+    /* se agrega la decoración y permite posicionar sus elementos internos */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(90deg,
+            var(--color-secundary-light) 0 50px,
+            var(--color-tertiary-light) 40px 90px);
+    /* mejorar la ondulación y hacerla más suave, tengo que poner
+     los centros de los círculos más corridos
+    puedo hacer un creador de css propio para esto
+    */
+    --mask:
+        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
+        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
+        radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
+        radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.flechaDerecha {
+    position: absolute;
+    top: var(--ubication-arrows);
+    right: 30px;
+    width: 50px;
+    /* AVERIGUAR CÓMO CAMBIAR EL COLOR DEL SVG */
+    /* color: black !important; */
+    /* fill: black !important; */
+}
+
+.flechaIzquierda {
+    position: absolute;
+    top: var(--ubication-arrows);
+    left: 30px;
+    width: 50px;
+    transform: rotate(180deg);
+}
+
+.textCaroussel {
+    width: 400px;
+    margin-left: 100px;
+    font-family: Sacramento, sans-serif;
+    font-size: 60px;
+    color: var(--color-text-secundary-light);
+}
+
+.imageCaroussel {
+    max-height: 500px;
+    margin-right: 100px;
+}
+
+/*------------- section made -------------*/
+.section_made {
+    position: absolute;
+    top: var(--top-made);
+    margin-top: 50px;
+}
+
+.subsection_made {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.made {
+    width: max-content;
+    padding: 0px 50px 0px 50px;
+}
+
+.made :nth-child(1) {
+    font-family: Afacad, sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    color: var(--color-secundary-light);
+    width: max-content;
+
+}
+
+.made :nth-child(2) {
+    font-family: Sacramento, sans-serif;
+    font-size: 60px;
+    width: max-content;
+}
+
+.text {
+    max-width: 500px;
+    font-family: Poiret One, sans-serif;
+    font-size: 17px;
+
+}
+
+/* -------------------------------------------- */
