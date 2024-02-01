@@ -37,16 +37,18 @@
     margin: 10px;
     width: 20px;
     height: 20px;
-    background-color: var(--color-quintary-light);
+    background-color: var(--color-primary-light);
     border-radius: 50px;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .circleCarousselActive {
     margin: 10px;
     width: 20px;
     height: 20px;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-quintary-light);
     border-radius: 50px;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 
