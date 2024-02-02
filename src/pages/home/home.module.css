@@ -269,17 +269,26 @@
     color: var(--color-secundary-light);
 }
 
-/* ---------section team ----------------- */
+/* -------------------section team ------------------- */
 .section_team {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+
     width: 100vw;
     height: 600px;
     background-image: url("../../../public/images/products/pan-dulce3.jpg");
     background-size: cover;
+    background-attachment: fixed;
     margin-bottom: -20px;
+}
+
+.container_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    ;
 }
 
 .body_team {
