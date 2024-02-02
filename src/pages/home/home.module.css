@@ -1,20 +1,27 @@
 .home {
+    display: flex;
+    flex-direction: column;
+    /* MEDIDAS de HOME debido a position absolute */
     /* variable que indica ubicación y medidas carousel 
     y todas las secciones subsiguientes
     */
     --top-carousel: 100px;
     --height-carousel: 500px;
-    /* debe sumarse los dos anteriores para obtener este */
-    --top-made: 600px;
+
     /* la ubicación de las flechas, es la mitad de la altura del carousel
     menos la mitad de la altura de la flecha
     */
     --ubication-arrows: 225px;
-    /* la ubicación de las cards de information  top made + 200*/
-    --ubication-information: 800px;
+
+    /* debe sumarse los dos anteriores para obtener este
+  con este margen ya todos las demás secciones
+   se ubican debajo
+  */
+    --margin-top-made: 500px;
 }
 
-.caroussel {
+/* --------section caroussel------------------ */
+.section_caroussel {
     /* produce la ubicación del carousel posicionado de acuerdo al navbar */
     z-index: 1;
     position: absolute;
@@ -43,6 +50,7 @@
     border-radius: 50px;
     box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5);
 
+    cursor: pointer;
 }
 
 .circleCarousselActive {
@@ -52,6 +60,8 @@
     background-color: var(--color-quintary-light);
     border-radius: 50px;
     box-shadow: inset 1px 1px 10px var(--color-primary-light);
+
+    cursor: pointer;
 }
 
 
@@ -86,9 +96,8 @@
     top: var(--ubication-arrows);
     right: 30px;
     width: 50px;
-    /* AVERIGUAR CÓMO CAMBIAR EL COLOR DEL SVG */
-    /* color: black !important; */
-    /* fill: black !important; */
+
+    cursor: pointer;
 }
 
 .flechaIzquierda {
@@ -97,6 +106,8 @@
     left: 30px;
     width: 50px;
     transform: rotate(180deg);
+
+    cursor: pointer;
 }
 
 .textCaroussel {
@@ -114,9 +125,7 @@
 
 /*------------- section made -------------*/
 .section_made {
-    position: absolute;
-    top: var(--top-made);
-    margin-top: 50px;
+    margin-top: var(--margin-top-made);
 }
 
 .subsection_made {
@@ -154,35 +163,76 @@
 
 }
 
-/* ------------Information----------------- */
+/* ------------section Information----------------- */
 
-.information {
+.section_information {
     width: 100vw;
-    position: absolute;
-    top: var(--ubication-information);
-    margin: 50px 0 50px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
 .cards {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 250px;
     height: 300px;
     padding: 10px;
     /* background-color: var(--color-quaternary-light); */
+    box-shadow: 1px 1px 5px var(--color-primary-light);
+
+}
+
+.circle_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
     border-color: var(--color-primary-light);
     border-style: solid;
 }
 
 .imageCard {
-    width:
+    width: 100px;
 
+}
+
+.name {
+    font-family: Sacramento, sans-serif;
+    font-size: 40px;
+    color: var(--color-secundary-light);
+}
+
+.information {
+    font-family: Poiret One, sans-serif;
+    font-size: 17px;
+}
+
+.read_more {
+    margin: 10px;
+    padding: 10px 30px 10px 30px;
+    background-color: var(--color-secundary-light);
+
+    font-family: Poiret One, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--color-text-secundary-light);
+
+    cursor: pointer;
+}
+
+/* ---------section team ----------------- */
+.section_team {
+    margin-bottom: -20px;
 }

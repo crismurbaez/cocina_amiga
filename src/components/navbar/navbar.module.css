@@ -59,6 +59,7 @@ a {
 
 /* agrega una línea vertical encima de la página
 luego agregarle la animación del scrolling */
+/* terminar de completar con los datos que faltan */
 &:after {
     content: '';
     position: absolute;
@@ -68,7 +69,7 @@ luego agregarle la animación del scrolling */
     height: 4px;
     background-color: var(--color-primary-light);
     will-change: contents;
-    /* terminar de completar con los datos que faltan */
+
     transform: scaleX(1);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;

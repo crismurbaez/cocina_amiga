@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import s from './home.module.css';
-
+// PARA HACER!!!!
+// Hacer una sección de administración para dar el alta de toda la información.
+// separar todo en componentes
 
 const Home = () => {
-    // Hacer una sección de administración para dar el alta de toda la información.
     // imágenes del carrusel, UNO solamente debe tener current=true 
     // si NINGUNO es current=true el carrusel se mostrará vacío al inicio!!!!
     // las imágenes deben ser de fondo transparente para que se vean más bonitas
@@ -43,9 +44,9 @@ const Home = () => {
     ])
 
     const [information, setInformation] = useState([
-        { name: 'Delivery', image: 'delivery.svg', alt: "delivery", information: 'Sólo en 30 minutos', link: '' },
-        { name: 'Package', image: 'package-3.svg', alt: "package", information: 'Free', link: '' },
-        { name: 'Discount 15%', image: 'cupcake.svg', alt: "cupcake", information: 'Por ocasión de la apertura', link: '' }
+        { name: 'Delivery', image: 'delivery4.svg', alt: "delivery", information: 'Sólo en 30 minutos', link: '' },
+        { name: 'Package', image: 'package-5.svg', alt: "package", information: 'Free', link: '' },
+        { name: 'Discount 15%', image: 'cupcake2.svg', alt: "cupcake", information: 'Por ocasión de la apertura', link: '' }
     ])
 
     const modifyCaroussel = (index) => {
@@ -97,7 +98,7 @@ const Home = () => {
     return (
         <div className={s.home}>
             {/* ------------section carousel------------- */}
-            <section className={s.caroussel}>
+            <section className={s.section_caroussel}>
                 <div className={s.decorationBackground}>
                     {imagesCaroussel?.map((image, index) => {
                         return (
@@ -169,26 +170,33 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* delivery / package / discount */}
 
-            <section className={s.information}>
+            {/* -----------section information ------------------------ */}
+            <section className={s.section_information}>
                 <div className={s.cards}>
                     {
                         information.map((inf) => {
                             return (
                                 <div className={s.card}>
-                                    <img
-                                        className={s.imageCard}
-                                        src={"./images/svg/" + inf.image}
-                                        alt={inf.alt} />
-                                    <div>{inf.name}</div>
-                                    <div>{inf.information}</div>
-                                    <button>Leer más</button>
+                                    <div className={s.circle_card}>
+                                        <img
+                                            className={s.imageCard}
+                                            src={"./images/svg/" + inf.image}
+                                            alt={inf.alt} />
+                                    </div>
+                                    <div className={s.name}>{inf.name}</div>
+                                    <div className={s.information}>{inf.information}</div>
+                                    <button className={s.read_more}>Leer más</button>
                                 </div>
                             )
                         })
                     }
-                    <img src="" alt="" />
+                </div>
+            </section>
+            {/* ---------section our team ------------------ */}
+            <section>
+                <div className={s.section_team}>
+                    <img src="./images/products/pan-dulce3.jpg" alt="" />
                 </div>
             </section>
 
