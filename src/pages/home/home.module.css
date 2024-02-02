@@ -10,6 +10,8 @@
     menos la mitad de la altura de la flecha
     */
     --ubication-arrows: 225px;
+    /* la ubicación de las cards de information  top made + 200*/
+    --ubication-information: 800px;
 }
 
 .caroussel {
@@ -40,6 +42,7 @@
     background-color: var(--color-primary-light);
     border-radius: 50px;
     box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .circleCarousselActive {
@@ -48,8 +51,9 @@
     height: 20px;
     background-color: var(--color-quintary-light);
     border-radius: 50px;
-    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 1px 1px 10px var(--color-primary-light);
 }
+
 
 
 .decorationBackground {
@@ -150,4 +154,35 @@
 
 }
 
-/* -------------------------------------------- */
+/* ------------Information----------------- */
+
+.information {
+    width: 100vw;
+    position: absolute;
+    top: var(--ubication-information);
+    margin: 50px 0 50px 0;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    /* background-color: var(--color-quaternary-light); */
+    border-color: var(--color-primary-light);
+    border-style: solid;
+}
+
+.imageCard {
+    width:
+
+}

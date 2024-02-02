@@ -2,7 +2,7 @@
 
 <defs>
 </defs>
-<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+<g  transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" fill="#f25e80" >
 	<path d="M 24.342 65.261 H 8.063 c -0.557 0 -1.009 -0.451 -1.009 -1.009 c 0 -0.558 0.452 -1.009 1.009 -1.009 h 16.279 c 0.557 0 1.009 0.451 1.009 1.009 C 25.351 64.81 24.899 65.261 24.342 65.261 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
 	<path d="M 24.77 57.374 H 1.009 C 0.452 57.374 0 56.923 0 56.365 c 0 -0.557 0.452 -1.009 1.009 -1.009 H 24.77 c 0.557 0 1.009 0.452 1.009 1.009 C 25.779 56.923 25.327 57.374 24.77 57.374 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
 	<path d="M 14.65 49.487 H 1.009 C 0.452 49.487 0 49.036 0 48.478 c 0 -0.557 0.452 -1.009 1.009 -1.009 H 14.65 c 0.557 0 1.009 0.452 1.009 1.009 C 15.659 49.036 15.207 49.487 14.65 49.487 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />

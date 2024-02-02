@@ -10,7 +10,10 @@ const Navbar = () => {
     // VER OTRAS FORMAS DE POSICIONAR el logo superpuesto, creo que con los pseudo elementos de CSS como ::after...
 
     // Es conveniente que la cantidad de elementos del menú sea par para que el logo quede centrado
-    // se podría ejecutar un algoritmo para que coloque el logo al constado cuando la cantidad de elementos es impar
+    // se podría ejecutar un algoritmo para que coloque el logo al constado
+    //  cuando la cantidad de elementos es impar o que deje un espacio vacío,
+    //  o que invente algo para el final, funciona igual pero queda descentrado
+
     const [navigation, setNavigation] = useState([
         { name: 'Inicio', link: '/', current: true, },
         { name: 'Tortas', link: '/cakes', current: false, },
