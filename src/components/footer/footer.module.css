@@ -1,15 +1,6 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: end;
     width: 100vw;
     height: 300px;
-    padding: 50px;
-
-    color: var(--color-text-secundary-light);
-    font-family: Sacramento, sans-serif;
-    font-size: 40px;
 
     background-image: repeating-linear-gradient(90deg,
             var(--color-secundary-light) 0 50px,
@@ -18,17 +9,104 @@
      los centros de los círculos más corridos
     puedo hacer un creador de css propio para esto
     */
-    /* --mask:
-        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
-        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
-        radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
-        radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask); */
-
     --mask:
         radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 100% repeat-x,
         radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+}
+
+.container_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contact_footer {
+    margin-top: 50px;
+    font-family: Poiret One, sans-serif;
+    font-size: 25px;
+    color: var(--color-text-secundary-light);
+}
+
+.container_contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact_team {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.one_team {
+    color: var(--color-text-secundary-light);
+    font-family: Afacad, sans-serif;
+    font-size: 20px;
+}
+
+.two_team {
+    color: var(--color-text-secundary-light);
+    font-family: Afacad, sans-serif;
+    font-size: 20px;
+}
+
+
+.instagram {
+    height: 30px;
+}
+
+.whatsapp {
+    height: 40px;
+}
+
+.linea_footer {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-quintary-light);
+}
+
+.data {
+    margin-top: 10px;
+    color: var(--color-text-secundary-light);
+    font-family: Afacad, sans-serif;
+    font-size: 20px;
+}
+
+.triangle {
+    position: relative;
+    z-index: 1;
+    width: 60px;
+    height: 30px;
+    background-color: var(--color-quintary-light);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.arrow_footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 21px;
+    height: 18px;
+    transform: rotate(-90deg);
 }
