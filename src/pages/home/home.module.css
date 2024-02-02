@@ -192,6 +192,14 @@
 
 }
 
+.odd_card {
+    background-color: var(--color-quintary-light);
+}
+
+.even_card {
+    background-color: var(--color-secundary-light);
+}
+
 .circle_card {
     display: flex;
     justify-content: center;
@@ -199,19 +207,32 @@
     width: 150px;
     height: 150px;
     border-radius: 100px;
-    border-color: var(--color-primary-light);
-    border-style: solid;
+}
+
+.odd_circle {
+    background-color: var(--color-secundary-light);
+}
+
+.even_circle {
+    background-color: var(--color-quintary-light);
 }
 
 .imageCard {
     width: 100px;
-
 }
 
 .name {
     font-family: Sacramento, sans-serif;
     font-size: 40px;
+
+}
+
+.odd_name {
     color: var(--color-secundary-light);
+}
+
+.even_name {
+    color: var(--color-quintary-light);
 }
 
 .information {
@@ -219,20 +240,90 @@
     font-size: 17px;
 }
 
+.odd_info {
+    color: var(--color-text-primary-light);
+}
+
+.even_info {
+    color: var(--color-text-secundary-light);
+}
+
 .read_more {
     margin: 10px;
     padding: 10px 30px 10px 30px;
-    background-color: var(--color-secundary-light);
 
     font-family: Poiret One, sans-serif;
     font-size: 17px;
     font-weight: bold;
-    color: var(--color-text-secundary-light);
+
 
     cursor: pointer;
 }
 
+.odd_read {
+    background-color: var(--color-secundary-light);
+    color: var(--color-text-secundary-light);
+}
+
+.even_read {
+    background-color: var(--color-quintary-light);
+    color: var(--color-secundary-light);
+}
+
 /* ---------section team ----------------- */
 .section_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+    background-image: url("../../../public/images/products/pan-dulce3.jpg");
+    background-size: cover;
     margin-bottom: -20px;
+}
+
+.body_team {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+.titulo_team {
+    font-family: Sacramento, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--color-tertiary-light);
+    margin: 50px;
+}
+
+.info_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_team {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border-color: var(--color-secundary-light);
+    border-width: 6px;
+    border-style: solid;
+}
+
+.name_team {
+    font-family: Afacad, sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--color-quintary-light);
+}
+
+.detail_team {
+    font-family: Poiret One, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-quaternary-light);
 }

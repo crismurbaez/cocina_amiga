@@ -175,18 +175,43 @@ const Home = () => {
             <section className={s.section_information}>
                 <div className={s.cards}>
                     {
-                        information.map((inf) => {
+                        information.map((inf, index) => {
                             return (
-                                <div className={s.card}>
-                                    <div className={s.circle_card}>
+                                <div className={`
+                                    ${s.card} 
+                                    ${index % 2 === 0
+                                        ? s.odd_card
+                                        : s.even_card}
+                                        `}>
+                                    <div className={`
+                                        ${s.circle_card} 
+                                        ${index % 2 === 0
+                                            ? s.odd_circle
+                                            : s.even_circle}
+                                            `}>
                                         <img
                                             className={s.imageCard}
                                             src={"./images/svg/" + inf.image}
                                             alt={inf.alt} />
                                     </div>
-                                    <div className={s.name}>{inf.name}</div>
-                                    <div className={s.information}>{inf.information}</div>
-                                    <button className={s.read_more}>Leer más</button>
+                                    <div className={`
+                                        ${s.name}
+                                        ${index % 2 === 0
+                                            ? s.odd_name
+                                            : s.even_name}
+                                            `}>{inf.name}</div>
+                                    <div className={`
+                                        ${s.information}
+                                            ${index % 2 === 0
+                                            ? s.odd_info
+                                            : s.even_info}
+                                        }`}>{inf.information}</div>
+                                    <button className={`
+                                        ${s.read_more}
+                                        ${index % 2 === 0
+                                            ? s.odd_read
+                                            : s.even_read}
+                                        `}>Leer más</button>
                                 </div>
                             )
                         })
@@ -194,9 +219,17 @@ const Home = () => {
                 </div>
             </section>
             {/* ---------section our team ------------------ */}
-            <section>
-                <div className={s.section_team}>
-                    <img src="./images/products/pan-dulce3.jpg" alt="" />
+            <section className={s.section_team}>
+                <div className={s.titulo_team}>Nuestro equipo</div>
+                <div className={s.body_team}>
+                    <div className={s.info_team} ><img className={s.img_team} src="./images/team/agustin_rosales.jpg" alt="" />
+                        <p className={s.name_team}>Agustín Rosales</p>
+                        <p className={s.detail_team}>Chef</p>
+                    </div>
+                    <div className={s.info_team}><img className={s.img_team} src="./images/team/celeste_soria.jpg" alt="" />
+                        <p className={s.name_team}>Celeste Soria</p>
+                        <p className={s.detail_team}>Lic. en Turismo</p>
+                    </div>
                 </div>
             </section>
 
