@@ -110,3 +110,31 @@
     height: 18px;
     transform: rotate(-90deg);
 }
+
+@media (max-width: 750px) {
+    .footer {
+        height: 600px;
+    }
+
+    .contact_footer {
+        text-align: center;
+        font-size: 25px;
+        color: var(--color-text-secundary-light);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .contact_team {
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .data {
+        text-align: center;
+    }
+
+}
