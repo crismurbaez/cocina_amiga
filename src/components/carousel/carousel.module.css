@@ -105,27 +105,27 @@
 
     .imageCarousel {
         max-height: 300px;
-        margin-right: 100px;
+        margin-right: 5px;
     }
 
     .textCarousel {
-        width: 200px;
-        margin-left: 20px;
-        font-size: 40px;
+        width: 300px;
+        margin-left: 5px;
+        font-size: 50px;
     }
 
 }
 
 @media (max-width: 750px) {
     .imageCarousel {
-        max-height: 200px;
-        margin-right: 50px;
+        max-height: 250px;
+        margin-right: 0;
     }
 
     .textCarousel {
-        width: 100px;
-        margin-left: 50px;
-        font-size: 20px;
+        width: 350px;
+        margin-left: 0;
+        font-size: 40px;
     }
 
     .flechaDerecha {
@@ -136,5 +136,25 @@
     .flechaIzquierda {
         left: 10px;
         width: 50px;
+    }
+
+    .decorationBackground {
+        /* se agrega la decoración y permite posicionar sus elementos internos */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .circlesPosition {
+        left: 20px;
+        bottom: 30px;
+    }
+
+    .circlesPositionFlex {
+        display: flex;
+        justify-content: center;
     }
 }

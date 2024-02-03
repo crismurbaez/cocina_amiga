@@ -101,27 +101,30 @@ const Carousel = () => {
             })}
         </div>
         {/* círculos de posición */}
-        <div className={s.circlesPosition}>
-            <div className={s.circles}>
-                {imagesCarousel?.map((image, index) => {
-                    return (
-                        (image.current === true) ?
-                            <div
-                                key={index.toString()}
-                                onMouseEnter={pauseTimer}
-                                onMouseLeave={playTimer}
-                                onClick={() => circleCaroussel(index)}
-                                className={s.circleCarouselActive}></div>
-                            :
-                            <div
-                                className={s.circleCarousel}
-                                key={index.toString()}
-                                onMouseEnter={pauseTimer}
-                                onMouseLeave={playTimer}
-                                onClick={() => circleCaroussel(index)}
-                            ></div>
-                    )
-                })}
+        <div className={s.circlesPositionFlex}>
+            <div className={s.circlesPosition}>
+
+                <div className={s.circles}>
+                    {imagesCarousel?.map((image, index) => {
+                        return (
+                            (image.current === true) ?
+                                <div
+                                    key={index.toString()}
+                                    onMouseEnter={pauseTimer}
+                                    onMouseLeave={playTimer}
+                                    onClick={() => circleCaroussel(index)}
+                                    className={s.circleCarouselActive}></div>
+                                :
+                                <div
+                                    className={s.circleCarousel}
+                                    key={index.toString()}
+                                    onMouseEnter={pauseTimer}
+                                    onMouseLeave={playTimer}
+                                    onClick={() => circleCaroussel(index)}
+                                ></div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
         {/* botones */}
