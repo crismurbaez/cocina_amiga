@@ -1,0 +1,65 @@
+.section_team {
+
+    width: 100vw;
+    height: 600px;
+    background-image: url("../../../public/images/products/pan-dulce3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: -20px;
+}
+
+.container_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    ;
+}
+
+.body_team {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+.titulo_team {
+    font-family: Sacramento, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--color-tertiary-light);
+    margin: 50px;
+}
+
+.info_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_team {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border-color: var(--color-secundary-light);
+    border-width: 6px;
+    border-style: solid;
+}
+
+.name_team {
+    font-family: Afacad, sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--color-quintary-light);
+}
+
+.detail_team {
+    font-family: Poiret One, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-quaternary-light);
+}

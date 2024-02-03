@@ -13,9 +13,22 @@ html {
   --color-quintary-light: #ffffff;
   --color-text-primary-light: black;
   --color-text-secundary-light: white;
+
+  /* MEDIDAS de HOME debido a position absolute */
+  /* variable que indica ubicación y medidas carousel 
+    y todas las secciones subsiguientes
+    */
+  --top-carousel: 100px;
+  --height-carousel: 500px;
+
+  /* la ubicación de las flechas, es la mitad de la altura del carousel
+    menos la mitad de la altura de la flecha
+    */
+  --ubication-arrows: 225px;
+
+  /* debe sumarse los dos anteriores para obtener este
+  con este margen ya todos las demás secciones
+   se ubican debajo
+  */
+  --margin-top-made: 500px;
 }
-
-/* background-color: #282c34;
-
-
-*/

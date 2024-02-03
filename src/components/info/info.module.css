@@ -1,0 +1,103 @@
+.section_information {
+    width: 100vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px var(--color-primary-light);
+
+}
+
+.odd_card {
+    background-color: var(--color-quintary-light);
+}
+
+.even_card {
+    background-color: var(--color-secundary-light);
+}
+
+.circle_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+.odd_circle {
+    background-color: var(--color-secundary-light);
+}
+
+.even_circle {
+    background-color: var(--color-quintary-light);
+}
+
+.imageCard {
+    width: 100px;
+}
+
+.name {
+    font-family: Sacramento, sans-serif;
+    font-size: 40px;
+
+}
+
+.odd_name {
+    color: var(--color-secundary-light);
+}
+
+.even_name {
+    color: var(--color-quintary-light);
+}
+
+.information {
+    font-family: Poiret One, sans-serif;
+    font-size: 17px;
+}
+
+.odd_info {
+    color: var(--color-text-primary-light);
+}
+
+.even_info {
+    color: var(--color-text-secundary-light);
+}
+
+.read_more {
+    margin: 10px;
+    padding: 10px 30px 10px 30px;
+
+    font-family: Poiret One, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+
+
+    cursor: pointer;
+}
+
+.odd_read {
+    background-color: var(--color-secundary-light);
+    color: var(--color-text-secundary-light);
+}
+
+.even_read {
+    background-color: var(--color-quintary-light);
+    color: var(--color-secundary-light);
+}

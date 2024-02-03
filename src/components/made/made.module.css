@@ -1,0 +1,38 @@
+/*-------------------- section made ------------------------*/
+.section_made {
+    margin-top: var(--margin-top-made);
+}
+
+.subsection_made {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.made {
+    width: max-content;
+    padding: 0px 50px 0px 50px;
+}
+
+.made :nth-child(1) {
+    font-family: Afacad, sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    color: var(--color-secundary-light);
+    width: max-content;
+
+}
+
+.made :nth-child(2) {
+    font-family: Sacramento, sans-serif;
+    font-size: 60px;
+    width: max-content;
+}
+
+.text {
+    max-width: 500px;
+    font-family: Poiret One, sans-serif;
+    font-size: 20px;
+}

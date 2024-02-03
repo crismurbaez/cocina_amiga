@@ -1,0 +1,140 @@
+.section_carousel {
+    /* produce la ubicación del carousel posicionado de acuerdo al navbar */
+    z-index: 1;
+    position: absolute;
+    top: var(--top-carousel);
+    width: 100vw;
+    height: var(--height-carousel);
+}
+
+.circlesPosition {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.circleCarousel {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-primary-light);
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5);
+
+    cursor: pointer;
+}
+
+.circleCarouselActive {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-quintary-light);
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 10px var(--color-primary-light);
+
+    cursor: pointer;
+}
+
+
+
+.decorationBackground {
+    /* se agrega la decoración y permite posicionar sus elementos internos */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(90deg,
+            var(--color-secundary-light) 0 50px,
+            var(--color-tertiary-light) 40px 90px);
+    /* mejorar la ondulación y hacerla más suave, tengo que poner
+     los centros de los círculos más corridos
+    puedo hacer un creador de css propio para esto
+    */
+    --mask:
+        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
+        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
+        radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
+        radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.flechaDerecha {
+    position: absolute;
+    top: var(--ubication-arrows);
+    right: 30px;
+    width: 50px;
+
+    cursor: pointer;
+}
+
+.flechaIzquierda {
+    position: absolute;
+    top: var(--ubication-arrows);
+    left: 30px;
+    width: 50px;
+    transform: rotate(180deg);
+
+    cursor: pointer;
+}
+
+.textCarousel {
+    width: 400px;
+    margin-left: 100px;
+    font-family: Sacramento, sans-serif;
+    font-size: 60px;
+    color: var(--color-text-secundary-light);
+}
+
+.imageCarousel {
+    max-height: 500px;
+    margin-right: 100px;
+}
+
+/* Estilos para pantallas con un ancho máximo de 999px */
+@media (min-width: 750px) and (max-width: 999px) {
+
+    .imageCarousel {
+        max-height: 300px;
+        margin-right: 100px;
+    }
+
+    .textCarousel {
+        width: 200px;
+        margin-left: 20px;
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .imageCarousel {
+        max-height: 200px;
+        margin-right: 50px;
+    }
+
+    .textCarousel {
+        width: 100px;
+        margin-left: 50px;
+        font-size: 20px;
+    }
+
+    .flechaDerecha {
+        right: 10px;
+        width: 50px;
+    }
+
+    .flechaIzquierda {
+        left: 10px;
+        width: 50px;
+    }
+}
