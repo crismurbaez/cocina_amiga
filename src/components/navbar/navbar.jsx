@@ -32,45 +32,52 @@ const Navbar = () => {
 
     return (
         <nav >
-            <div className={s.navbar}>
-
-                {navigation?.map((nav, index) => {
-                    return (
-                        // Analiza cuando el menú llega hasta la mitad de elementos
-                        (index !== Math.floor(navigation.length / 2)) ?
-                            <div key={index + 1} className={[nav.current ? s.active : s.link]} >
-                                {/* En el console.log están las dos formas de escribir el classname 
-                                {console.log([nav.current ? s.active : s.link], `${nav.current ? s.active : s.link}`)} */}
-                                <Link
-                                    name={nav.name}
-                                    onClick={(e) => navbarClick(index, e.target)}
-                                    className={[nav.current ? s.active : s.link]}
-                                    to={nav.link}>
-
-                                    {nav.name}
-                                </Link>
-                            </div>
-                            :
-                            <>
-                                {/* Coloca el logo y el siguiente elemento en el centro 
+            <div >
+                {/* menu movile */}
+                <div className={s.movile}>
+                    <div key={'logo'}>
+                        <img className={s.logo} src="./images/logo.jpg" alt="" />
+                    </div>
+                </div>
+                {/* menu desktop */}
+                <dir className={s.desktop}>
+                    <div className={s.navbar}>
+                        {navigation?.map((nav, index) => {
+                            return (
+                                // Analiza cuando el menú llega hasta la mitad de elementos
+                                (index !== Math.floor(navigation.length / 2)) ?
+                                    <div key={index + 1} className={[nav.current ? s.active : s.link]} >
+                                        <Link
+                                            name={nav.name}
+                                            onClick={(e) => navbarClick(index, e.target)}
+                                            className={[nav.current ? s.active : s.link]}
+                                            to={nav.link}>
+                                            {nav.name}
+                                        </Link>
+                                    </div>
+                                    :
+                                    <>
+                                        {/* Coloca el logo y el siguiente elemento en el centro 
                                 cuando el menú tenga la mitad elementos. */}
-                                <div key={'logo'}>
-                                    <img className={s.logo} src="./images/logo.jpg" alt="" />
-                                </div>
-                                <div key={index + 1} className={[nav.current ? s.active : s.link]} >
-                                    <Link
+                                        <div key={'logo'}>
+                                            <img className={s.logo} src="./images/logo.jpg" alt="" />
+                                        </div>
+                                        <div key={index + 1} className={[nav.current ? s.active : s.link]} >
+                                            <Link
 
-                                        name={nav.name}
-                                        onClick={(e) => navbarClick(index, e.target)}
-                                        className={[nav.current ? s.active : s.link]}
-                                        to={nav.link}>
+                                                name={nav.name}
+                                                onClick={(e) => navbarClick(index, e.target)}
+                                                className={[nav.current ? s.active : s.link]}
+                                                to={nav.link}>
 
-                                        {nav.name}
-                                    </Link>
-                                </div>
-                            </>
-                    )
-                })}
+                                                {nav.name}
+                                            </Link>
+                                        </div>
+                                    </>
+                            )
+                        })}
+                    </div>
+                </dir>
             </div>
         </nav>
     )
