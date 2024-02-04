@@ -1,5 +1,27 @@
 .movile {
     display: none;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.position_menu {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.menu_hamburger {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_image {
+    margin: 5px;
+    width: 50px;
+    height: 4px;
+    background-color: var(--color-primary-light);
 }
 
 .navbar {
@@ -86,9 +108,7 @@ luego agregarle la animación del scrolling */
 
     .movile {
         display: flex;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
+
     }
 
 }
@@ -100,8 +120,5 @@ luego agregarle la animación del scrolling */
 
     .movile {
         display: flex;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
     }
 }

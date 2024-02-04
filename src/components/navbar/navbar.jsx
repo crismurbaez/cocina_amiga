@@ -35,6 +35,13 @@ const Navbar = () => {
             <div >
                 {/* menu movile */}
                 <div className={s.movile}>
+                    <div className={s.position_menu}>
+                        <div className={s.menu_hamburger}>
+                            <div className={s.menu_image}></div>
+                            <div className={s.menu_image}></div>
+                            <div className={s.menu_image}></div>
+                        </div>
+                    </div>
                     <div key={'logo'}>
                         <img className={s.logo} src="./images/logo.jpg" alt="" />
                     </div>
