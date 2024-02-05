@@ -24,7 +24,7 @@ const Navbar = () => {
     //considional de abrir o cerrar menu movile
     const [isOpen, setIsOpen] = useState(false);
     // al hacer scroll se oculta el menu movile
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [prevScrollPos, setPrevScrollPos] = useState(document.documentElement.scrollTop);
 
     const navbarClick = (index, event) => {
         console.log(index);
@@ -49,10 +49,14 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-        const currentScrollPos = document.documentElement.scrollY;
+        const currentScrollPos = document.documentElement.scrollTop;
         setIsOpen(false);
         setPrevScrollPos(currentScrollPos);
     };
+
+    useEffect(() => {
+        console.log(prevScrollPos);
+    }, [prevScrollPos]);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -60,7 +64,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav >
+        <nav className={s.container_navbar}>
             <div >
                 {/* menu movile */}
                 <div className={s.movile}>
@@ -104,12 +108,16 @@ const Navbar = () => {
 
 
                     <div key={'logo'}>
-                        <img className={s.logo} src="./images/logo.jpg" alt="" />
+                        <img style={{ display: prevScrollPos === 0 ? 'flex' : 'none' }} className={s.logo} src="./images/logo.jpg" alt="" />
                     </div>
                 </div>
                 {/* menu desktop */}
                 <dir className={s.desktop}>
-                    <div className={s.navbar}>
+                    <div
+                        style={{
+                            backgroundColor: prevScrollPos === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.7)',
+                        }}
+                        className={s.navbar}>
                         {navigation?.map((nav, index) => {
                             return (
                                 // Analiza cuando el menú llega hasta la mitad de elementos
@@ -128,7 +136,12 @@ const Navbar = () => {
                                         {/* Coloca el logo y el siguiente elemento en el centro 
                                 cuando el menú tenga la mitad elementos. */}
                                         <div key={'logo'}>
-                                            <img className={s.logo} src="./images/logo.jpg" alt="" />
+                                            <img
+                                                style={{
+                                                    width: prevScrollPos === 0 ? '150px' : '70px',
+                                                    borderWidth: prevScrollPos === 0 ? '10px' : '3px'
+                                                }}
+                                                className={s.logo} src="./images/logo.jpg" alt="" />
                                         </div>
                                         <div key={index + 1} className={[nav.current ? s.active : s.link]} >
                                             <Link
