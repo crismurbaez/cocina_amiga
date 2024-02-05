@@ -52,7 +52,6 @@ const Navbar = () => {
                 {/* menu movile */}
                 <div className={s.movile}>
                     <div className={s.position_menu}>
-
                         <div onClick={() => setIsOpen(true)} className={s.menu_hamburger}>
                             <div className={s.menu_image}></div>
                             <div className={s.menu_image}></div>
