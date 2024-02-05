@@ -21,9 +21,10 @@ const Navbar = () => {
         { name: 'Galería', link: '/gallery', current: false, },
         { name: 'Contacto', link: '/contact', current: false, },
     ])
-    // agregar isOpen a redux para que sea un estado global, así puedo agregar un opacado a 
-    // toda la página cuando el sidebar está abierto
+    //considional de abrir o cerrar menu movile
     const [isOpen, setIsOpen] = useState(false);
+    // al hacer scroll se oculta el menu movile
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     const navbarClick = (index, event) => {
         console.log(index);
@@ -47,9 +48,16 @@ const Navbar = () => {
         setIsOpen(true)
     };
 
+    const handleScroll = () => {
+        const currentScrollPos = document.documentElement.scrollTop;
+        setIsOpen(false);
+        setPrevScrollPos(currentScrollPos);
+    };
+
     useEffect(() => {
-        console.log(isOpen);
-    }, ([isOpen]))
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <nav >
