@@ -49,7 +49,7 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-        const currentScrollPos = document.documentElement.scrollTop;
+        const currentScrollPos = document.documentElement.scrollY;
         setIsOpen(false);
         setPrevScrollPos(currentScrollPos);
     };
