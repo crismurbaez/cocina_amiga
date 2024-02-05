@@ -72,7 +72,7 @@ const Navbar = () => {
                     </div>
                     <div
                         style={{
-                            transform: isOpen ? 'scaleX(1)' : 'scaleX(0)',
+                            transform: isOpen ? 'translateX(0)' : 'translateX(-200%)',
                         }}
                         className={s.container_sidebar}>
                         <div className={s.sidebar}
