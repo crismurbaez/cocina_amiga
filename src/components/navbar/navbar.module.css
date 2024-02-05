@@ -58,7 +58,7 @@
 }
 
 .active_movile {
-    width: 130%;
+    width: 120%;
     height: 50px;
     padding: 10px 30px 10px 10px;
     clip-path: polygon(100% 0%, 83% 50%, 100% 100%, 0 100%, 0 0);
