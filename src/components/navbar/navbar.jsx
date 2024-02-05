@@ -31,6 +31,7 @@ const Navbar = () => {
             i === index
                 ? { ...item, current: true }
                 : { ...item, current: false })));
+        setIsOpen(false);
     };
 
 
@@ -40,7 +41,11 @@ const Navbar = () => {
         if (event.button === 0) {
             setIsOpen(false);
         }
-    }
+    };
+
+    const openMenu = () => {
+        setIsOpen(true)
+    };
 
     useEffect(() => {
         console.log(isOpen);
@@ -52,7 +57,7 @@ const Navbar = () => {
                 {/* menu movile */}
                 <div className={s.movile}>
                     <div className={s.position_menu}>
-                        <div onClick={() => setIsOpen(true)} className={s.menu_hamburger}>
+                        <div onClick={() => openMenu()} className={s.menu_hamburger}>
                             <div className={s.menu_image}></div>
                             <div className={s.menu_image}></div>
                             <div className={s.menu_image}></div>
@@ -66,7 +71,9 @@ const Navbar = () => {
                     >
                     </div>
                     <div
-                        style={{ display: isOpen ? 'flex' : 'none' }}
+                        style={{
+                            transform: isOpen ? 'scaleX(1)' : 'scaleX(0)',
+                        }}
                         className={s.container_sidebar}>
                         <div className={s.sidebar}
                         >

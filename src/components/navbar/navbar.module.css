@@ -40,12 +40,13 @@
 }
 
 .container_sidebar {
-    display: none;
     z-index: 8;
     position: absolute;
     top: 0px;
     left: 0px;
-
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
 }
 
 .sidebar {
