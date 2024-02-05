@@ -25,7 +25,7 @@ const Navbar = () => {
     // toda la página cuando el sidebar está abierto
     const [isOpen, setIsOpen] = useState(false);
 
-    const navbarClick = (index) => {
+    const navbarClick = (index, event) => {
         console.log(index);
         setNavigation((prevNav) => prevNav?.map((item, i) => (
             i === index
@@ -40,7 +40,6 @@ const Navbar = () => {
         if (event.button === 0) {
             setIsOpen(false);
         }
-
     }
 
     useEffect(() => {
@@ -64,13 +63,18 @@ const Navbar = () => {
                     <div id='sidebar'
                         onClick={closeMenu}
                         style={{ display: isOpen ? 'flex' : 'none' }}
-                        className={s.conteiner_sidebar}
+                        className={s.back_sidebar}
                     >
+                    </div>
+                    <div
+                        style={{ display: isOpen ? 'flex' : 'none' }}
+                        className={s.container_sidebar}>
                         <div className={s.sidebar}
                         >
                             {navigation.map((nav, index) => {
                                 return (
-                                    <div key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
+                                    <div
+                                        key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
                                         <Link
                                             name={nav.name}
                                             onClick={(e) => navbarClick(index, e.target)}
