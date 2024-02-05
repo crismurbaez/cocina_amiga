@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import s from './navbar.module.css';
 
@@ -13,7 +13,6 @@ const Navbar = () => {
     // se podría ejecutar un algoritmo para que coloque el logo al constado
     //  cuando la cantidad de elementos es impar o que deje un espacio vacío,
     //  o que invente algo para el final, funciona igual pero queda descentrado
-
     const [navigation, setNavigation] = useState([
         { name: 'Inicio', link: '/', current: true, },
         { name: 'Tortas', link: '/cakes', current: false, },
@@ -22,13 +21,31 @@ const Navbar = () => {
         { name: 'Galería', link: '/gallery', current: false, },
         { name: 'Contacto', link: '/contact', current: false, },
     ])
+    // agregar isOpen a redux para que sea un estado global, así puedo agregar un opacado a 
+    // toda la página cuando el sidebar está abierto
+    const [isOpen, setIsOpen] = useState(false);
 
     const navbarClick = (index) => {
+        console.log(index);
         setNavigation((prevNav) => prevNav?.map((item, i) => (
             i === index
                 ? { ...item, current: true }
                 : { ...item, current: false })));
     };
+
+
+    // por ahora se cierra solamente si hago click dentro del sidebar
+    // hacer que se cierre cuando hago click por fuera
+    const closeMenu = (event) => {
+        if (event.button === 0) {
+            setIsOpen(false);
+        }
+
+    }
+
+    useEffect(() => {
+        console.log(isOpen);
+    }, ([isOpen]))
 
     return (
         <nav >
@@ -36,12 +53,38 @@ const Navbar = () => {
                 {/* menu movile */}
                 <div className={s.movile}>
                     <div className={s.position_menu}>
-                        <div className={s.menu_hamburger}>
+
+                        <div onClick={() => setIsOpen(true)} className={s.menu_hamburger}>
                             <div className={s.menu_image}></div>
                             <div className={s.menu_image}></div>
                             <div className={s.menu_image}></div>
                         </div>
                     </div>
+
+                    <div id='sidebar'
+                        onClick={closeMenu}
+                        style={{ display: isOpen ? 'flex' : 'none' }}
+                        className={s.conteiner_sidebar}
+                    >
+                        <div className={s.sidebar}
+                        >
+                            {navigation.map((nav, index) => {
+                                return (
+                                    <div key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
+                                        <Link
+                                            name={nav.name}
+                                            onClick={(e) => navbarClick(index, e.target)}
+                                            className={[nav.current ? s.active_movile : s.link]}
+                                            to={nav.link}>
+                                            {nav.name}
+                                        </Link>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+
                     <div key={'logo'}>
                         <img className={s.logo} src="./images/logo.jpg" alt="" />
                     </div>
@@ -86,7 +129,7 @@ const Navbar = () => {
                     </div>
                 </dir>
             </div>
-        </nav>
+        </nav >
     )
 }
 
