@@ -82,7 +82,7 @@ const Carousel = () => {
             clearTimeout(autoplay.current);
             autoplay.current = setTimeout(() => {
                 goRigth();
-            }, 3000);
+            }, 4000);
         }
     }), ([isAnimating]);
 
