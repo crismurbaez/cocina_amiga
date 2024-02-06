@@ -6,6 +6,7 @@
 
 html {
   /* variables globales */
+  /* color */
   --color-primary-light: #f25e80;
   --color-secundary-light: #d9818d;
   --color-tertiary-light: #e6b5bb;
@@ -13,6 +14,11 @@ html {
   --color-quintary-light: #ffffff;
   --color-text-primary-light: black;
   --color-text-secundary-light: white;
+  /* font family */
+  --font-one: Sacramento;
+  --font-two: Afacad;
+  --font-three: Poiret One;
+  --font-four: sans-serif;
 
   /* MEDIDAS de HOME debido a position absolute */
   /* variable que indica ubicación y medidas carousel 

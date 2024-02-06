@@ -88,7 +88,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    font-family: Sacramento, sans-serif;
+    font-family: var(--font-one), var(--font-four);
     font-size: 35px;
     padding: 0px 50px 0px 50px;
 }

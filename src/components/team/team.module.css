@@ -26,9 +26,8 @@
 }
 
 .titulo_team {
-    font-family: Sacramento, sans-serif;
+    font-family: var(--font-one), var(--font-four);
     font-size: 80px;
-    font-weight: bold;
     color: var(--color-tertiary-light);
     margin: 50px;
 }

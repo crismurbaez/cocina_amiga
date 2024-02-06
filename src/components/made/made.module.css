@@ -17,7 +17,7 @@
 }
 
 .made :nth-child(1) {
-    font-family: Afacad, sans-serif;
+    font-family: var(--font-two), var(--font-four);
     text-transform: uppercase;
     font-size: 55px;
     color: var(--color-secundary-light);
@@ -25,14 +25,14 @@
 }
 
 .made :nth-child(2) {
-    font-family: Sacramento, sans-serif;
+    font-family: var(--font-one), var(--font-four);
     font-size: 60px;
     width: max-content;
 }
 
 .text {
     max-width: 500px;
-    font-family: Poiret One, sans-serif;
+    font-family: var(--font-three), var(--font-four);
     font-size: 20px;
     text-align: left;
 }
@@ -53,7 +53,7 @@
 
     .text {
         margin: 0 20px 0 20px;
-        font-family: Poiret One, sans-serif;
+        font-family: var(--font-three), var(--font-four);
         font-size: 20px;
         text-align: center;
     }

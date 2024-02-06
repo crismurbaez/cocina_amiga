@@ -90,7 +90,7 @@
 .textCarousel {
     width: 400px;
     margin-left: 100px;
-    font-family: Sacramento, sans-serif;
+    font-family: var(--font-one), var(--font-four);
     font-size: 60px;
     color: var(--color-text-secundary-light);
 }

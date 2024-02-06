@@ -28,7 +28,7 @@
 
 .contact_footer {
     margin-top: 50px;
-    font-family: Poiret One, sans-serif;
+    font-family: var(--font-three), var(--font-four);
     font-size: 25px;
     color: var(--color-text-secundary-light);
 }
@@ -61,13 +61,13 @@
 
 .one_team {
     color: var(--color-text-secundary-light);
-    font-family: Afacad, sans-serif;
+    font-family: var(--font-two), var(--font-four);
     font-size: 20px;
 }
 
 .two_team {
     color: var(--color-text-secundary-light);
-    font-family: Afacad, sans-serif;
+    font-family: var(--font-two), var(--font-four);
     font-size: 20px;
 }
 
@@ -89,7 +89,7 @@
 .data {
     margin-top: 10px;
     color: var(--color-text-secundary-light);
-    font-family: Afacad, sans-serif;
+    font-family: var(--font-two), var(--font-four);
     font-size: 20px;
 }
 
@@ -135,6 +135,7 @@
 
     .data {
         text-align: center;
+        font-family: var(--font-two), var(--font-four);
     }
 
 }
