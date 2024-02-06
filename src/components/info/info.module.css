@@ -54,7 +54,7 @@
 }
 
 .name {
-    font-family: Sacramento, sans-serif;
+    font-family: var(--font-one), var(--font-four);
     font-size: 40px;
 
 }
@@ -68,7 +68,7 @@
 }
 
 .information {
-    font-family: Poiret One, sans-serif;
+    font-family: var(--font-three), var(--font-four);
     font-size: 17px;
 }
 
@@ -84,7 +84,7 @@
     margin: 10px;
     padding: 10px 30px 10px 30px;
 
-    font-family: Poiret One, sans-serif;
+    font-family: var(--font-three), var(--font-four);
     font-size: 17px;
     font-weight: bold;
 
