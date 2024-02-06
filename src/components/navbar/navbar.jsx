@@ -15,10 +15,10 @@ const Navbar = () => {
     //  o que invente algo para el final, funciona igual pero queda descentrado
     const [navigation, setNavigation] = useState([
         { name: 'Inicio', link: '/', current: true, },
-        { name: 'Tortas', link: '/cakes', current: false, },
-        { name: 'Cupcakes', link: '/cupcakes', current: false, },
+        { name: 'Nosotros', link: '/cakes', current: false, },
+        { name: 'Productos', link: '/cupcakes', current: false, },
         { name: 'Novedades', link: '/news', current: false, },
-        { name: 'Galería', link: '/gallery', current: false, },
+        { name: 'Comentarios', link: '/gallery', current: false, },
         { name: 'Contacto', link: '/contact', current: false, },
     ])
     //considional de abrir o cerrar menu movile
