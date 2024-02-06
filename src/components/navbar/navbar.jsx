@@ -90,7 +90,7 @@ const Navbar = () => {
                         <div className={s.sidebar}
                         >
                             <div onClick={closeMenu} className={s.arrow_menu}></div>
-                            <img
+                            {/* <img
                                 style={{
                                     width: '100px',
                                     marginLeft: '50px',
@@ -99,7 +99,7 @@ const Navbar = () => {
                                     borderWidth: '6px',
                                 }}
                                 className={s.logo} src="./images/logo.jpg" alt=""
-                            />
+                            /> */}
                             {navigation.map((nav, index) => {
                                 return (
                                     <div
