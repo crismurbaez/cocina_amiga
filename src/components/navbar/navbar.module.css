@@ -66,13 +66,11 @@
 }
 
 .arrow_menu {
-    width: 50px;
-    height: 20px;
-    margin-top: 5px;
-    margin-left: 180px;
-    margin-bottom: 10px;
-    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
-    background-color: var(--color-primary-light);
+    width: 100px;
+    height: 50px;
+    margin-left: 145px;
+    /* clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); */
+    /* background-color: var(--color-primary-light); */
 }
 
 .active_movile {

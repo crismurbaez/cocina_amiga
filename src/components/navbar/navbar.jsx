@@ -89,7 +89,9 @@ const Navbar = () => {
                         className={s.container_sidebar}>
                         <div className={s.sidebar}
                         >
-                            <div onClick={closeMenu} className={s.arrow_menu}></div>
+
+                            <img onClick={closeMenu} className={s.arrow_menu} src="./images/svg/arrow-left.svg" alt="" />
+
                             {/* <img
                                 style={{
                                     width: '100px',
