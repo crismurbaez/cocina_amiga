@@ -18,8 +18,8 @@ const Navbar = () => {
         { name: 'Nosotros', link: '/cakes', current: false, },
         { name: 'Productos', link: '/cupcakes', current: false, },
         { name: 'Novedades', link: '/news', current: false, },
-        { name: 'Comentarios', link: '/gallery', current: false, },
-        { name: 'Contacto', link: '/contact', current: false, },
+        { name: 'Contacto', link: '/gallery', current: false, },
+        { name: 'Usuario', link: '/contact', current: false, },
     ])
     //considional de abrir o cerrar menu movile
     const [isOpen, setIsOpen] = useState(false);
