@@ -5,10 +5,6 @@ import Made from '../../components/made/made';
 import Info from '../../components/info/info';
 import Team from '../../components/team/team';
 
-// PARA HACER!!!!
-// Hacer una sección de administración para dar el alta de toda la información.
-// separar todo en componentes
-
 const Home = () => {
 
     return (

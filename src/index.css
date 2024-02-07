@@ -24,7 +24,7 @@ html {
   /* variable que indica ubicación y medidas carousel 
     y todas las secciones subsiguientes
     */
-  --top-carousel: 100px;
+  --top-first: 100px;
   --height-carousel: 500px;
 
   /* la ubicación de las flechas, es la mitad de la altura del carousel
@@ -36,5 +36,5 @@ html {
   con este margen ya todos las demás secciones
    se ubican debajo
   */
-  --margin-top-made: 650px;
+  --margin-top-two: 650px;
 }

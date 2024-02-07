@@ -1,0 +1,7 @@
+.users {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--margin-top-two);
+    font-family: var(--font-one);
+    font-size: 50px;
+}

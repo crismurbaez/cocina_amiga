@@ -15,11 +15,11 @@ const Navbar = () => {
     //  o que invente algo para el final, funciona igual pero queda descentrado
     const [navigation, setNavigation] = useState([
         { name: 'Inicio', link: '/', current: true, },
-        { name: 'Nosotros', link: '/cakes', current: false, },
-        { name: 'Productos', link: '/cupcakes', current: false, },
+        { name: 'Nosotros', link: '/about', current: false, },
+        { name: 'Productos', link: '/products', current: false, },
         { name: 'Novedades', link: '/news', current: false, },
-        { name: 'Contacto', link: '/gallery', current: false, },
-        { name: 'Usuario', link: '/contact', current: false, },
+        { name: 'Contacto', link: '/contact', current: false, },
+        { name: 'Usuario', link: '/users', current: false, },
     ])
     //considional de abrir o cerrar menu movile
     const [isOpen, setIsOpen] = useState(false);
@@ -92,16 +92,6 @@ const Navbar = () => {
 
                             <img onClick={closeMenu} className={s.arrow_menu} src="./images/svg/arrow-left.svg" alt="" />
 
-                            {/* <img
-                                style={{
-                                    width: '100px',
-                                    marginLeft: '50px',
-                                    marginTop: '1px',
-                                    marginBottom: '10px',
-                                    borderWidth: '6px',
-                                }}
-                                className={s.logo} src="./images/logo.jpg" alt=""
-                            /> */}
                             {navigation.map((nav, index) => {
                                 return (
                                     <div
@@ -128,7 +118,7 @@ const Navbar = () => {
                 <dir className={s.desktop}>
                     <div
                         style={{
-                            backgroundColor: prevScrollPos === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.7)',
+                            backgroundColor: prevScrollPos === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.8)',
                         }}
                         className={s.navbar}>
                         {navigation?.map((nav, index) => {
@@ -148,11 +138,15 @@ const Navbar = () => {
                                     <>
                                         {/* Coloca el logo y el siguiente elemento en el centro 
                                 cuando el menú tenga la mitad elementos. */}
-                                        <div key={'logo'}>
+                                        <div
+                                            key={'logo'}
+                                        >
                                             <img
                                                 style={{
                                                     width: prevScrollPos === 0 ? '150px' : '70px',
-                                                    borderWidth: prevScrollPos === 0 ? '10px' : '3px'
+                                                    marginLeft: prevScrollPos === 0 ? '0px' : '43px',
+                                                    marginRight: prevScrollPos === 0 ? '0px' : '43px',
+                                                    borderWidth: prevScrollPos === 0 ? '10px' : '5px'
                                                 }}
                                                 className={s.logo} src="./images/logo.jpg" alt="" />
                                         </div>

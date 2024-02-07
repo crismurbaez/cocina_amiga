@@ -2,7 +2,7 @@
     /* produce la ubicación del carousel posicionado de acuerdo al navbar */
     z-index: 1;
     position: absolute;
-    top: var(--top-carousel);
+    top: var(--top-first);
     width: 100vw;
     height: var(--height-carousel);
 }
