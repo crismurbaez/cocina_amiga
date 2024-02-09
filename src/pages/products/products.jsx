@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./products.module.css";
 import Carousel from "../../components/carousel/carousel";
 
 const Products = () => {
+    const [imagesProducts, setImagesProducts] = useState([
+        {
+            src: "choco-cake-nueces-transp.png",
+            alt: "torta de chocolate con nueces",
+            text: "Esta choco cake es una bomba de delicias!!",
+            current: true,
+        },
+        {
+            src: "red-velvet-removebg.png",
+            alt: "torta red velvet",
+            text: "Torta red velvet de frutos rojos.",
+            current: false,
+        },
+        {
+            src: "merengue-cake-removebg.png",
+            alt: "torta de merengue",
+            text: "Mi torta de merengue favorita...",
+            current: false,
+        },
+        {
+            src: "tarta-chocolate-removebg.png",
+            alt: "tarta de chocolate",
+            text: "Una rica tarta de chocolate para los mates.",
+            current: false,
+        },
+        {
+            src: "tarta-frutas-removebg.png",
+            alt: "tarta de frutas",
+            text: "Tarta de frutas fresca y dulce.",
+            current: false,
+        },
+    ])
     return (
         <div className={s.products}>
 
@@ -16,9 +48,18 @@ const Products = () => {
                     texturas, elaborados con ingredientes frescos y naturales que te
                     transportarán a un mundo de sensaciones.
                 </div>
-                <div className={s.card}>
-
+                <div className={s.section_cards}>
+                    {imagesProducts.map((image, index) => {
+                        return (
+                            <div className={s.card}>
+                                <img className={s.image_product}
+                                    src={`./images/products/${image.src}`}
+                                    alt={`${image.alt}`} />
+                            </div>
+                        )
+                    })}
                 </div>
+
             </section>
         </div>
     )
