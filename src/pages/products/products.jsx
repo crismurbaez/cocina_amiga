@@ -57,6 +57,7 @@ const Products = () => {
                     {imagesProducts.map((image, index) => {
                         return (
                             <div className={s.card}>
+                                <img className={s.dialog} src="./images/svg/dialog1.svg" alt="dialog" />
                                 <img className={s.image_product}
                                     src={`./images/products/${image.src}`}
                                     alt={`${image.alt}`} />
