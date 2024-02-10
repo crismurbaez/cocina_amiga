@@ -15,7 +15,7 @@
 }
 
 .title_cards {
-    padding: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
     font-family: var(--font-one);
     font-size: 50px;
     font-weight: lighter;
@@ -24,7 +24,7 @@
 }
 
 .detail_cards {
-    padding: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
     margin-bottom: 50px;
     font-family: var(--font-two);
     font-size: 25px;
