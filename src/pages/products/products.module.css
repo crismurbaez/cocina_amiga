@@ -52,9 +52,17 @@
 
 .dialog {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 0px;
     width: 100px;
+}
+
+.price {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    font-family: var(--font-two);
+    color: var(--color-text-secundary-light);
 }
 
 .image_product {

@@ -9,35 +9,35 @@ const Products = () => {
             src: "choco-cake-nueces-transp.png",
             alt: "torta de chocolate con nueces",
             text: "Esta choco cake es una bomba de delicias!!",
-            current: true,
+            price: 2500,
         },
         {
             name: "Red Velvet",
             src: "red-velvet-removebg.png",
             alt: "torta red velvet",
             text: "Torta red velvet de frutos rojos.",
-            current: false,
+            price: 2500,
         },
         {
             name: "Merengue Cake",
             src: "merengue-cake-removebg.png",
             alt: "torta de merengue",
             text: "Mi torta de merengue favorita...",
-            current: false,
+            price: 2500,
         },
         {
             name: "Tarta de Chocolate",
             src: "tarta-chocolate-removebg.png",
             alt: "tarta de chocolate",
             text: "Una rica tarta de chocolate para los mates.",
-            current: false,
+            price: 2500,
         },
         {
             name: "Tarta de frutas",
             src: "tarta-frutas-removebg.png",
             alt: "tarta de frutas",
             text: "Tarta de frutas fresca y dulce.",
-            current: false,
+            price: 2500,
         },
     ])
     return (
@@ -57,7 +57,8 @@ const Products = () => {
                     {imagesProducts.map((image, index) => {
                         return (
                             <div className={s.card}>
-                                <img className={s.dialog} src="./images/svg/dialog1.svg" alt="dialog" />
+                                <img className={s.dialog} src="./images/svg/dialog2.svg" alt="dialog" />
+                                <div className={s.price} $>{image.price} $</div>
                                 <img className={s.image_product}
                                     src={`./images/products/${image.src}`}
                                     alt={`${image.alt}`} />
