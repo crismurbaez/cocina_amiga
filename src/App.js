@@ -1,5 +1,6 @@
 import './App.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import Home from './pages/home/home';
@@ -9,7 +10,18 @@ import News from './pages/news/news';
 import Contact from './pages/contact/contact';
 import Users from './pages/users/users';
 
+
+let init = true;
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (init === true) {
+      navigate('/');
+      init = false;
+    }
+  }, [])
+
   return (
     <div className="App">
       <Navbar />
