@@ -50,13 +50,13 @@ const Navbar = () => {
 
     const handleScroll = () => {
         const currentScrollPos = document.documentElement.scrollTop;
-        setIsOpen(false);
+        // setIsOpen(false);
         setPrevScrollPos(currentScrollPos);
     };
 
-    useEffect(() => {
-        console.log(prevScrollPos);
-    }, [prevScrollPos]);
+    // useEffect(() => {
+    //     console.log(prevScrollPos);
+    // }, [prevScrollPos]);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);

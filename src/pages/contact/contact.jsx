@@ -33,7 +33,7 @@ const Contact = () => {
                     className={s.input}
                     type="text"
                     name="email"
-                    placeholder="maria@mail.com"
+                    placeholder="maria@email.com"
                 />
                 <label className={s.label} htmlFor="detail">Detalle</label>
                 <input
