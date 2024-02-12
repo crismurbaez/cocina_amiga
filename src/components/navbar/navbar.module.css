@@ -45,6 +45,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
+
 }
 
 .container_sidebar {
@@ -54,6 +55,8 @@
     left: 0px;
     transform: translateX(-200%);
     transition: transform 1s ease-out;
+    background-color: var(--color-quintary-light);
+
 }
 
 .sidebar {
@@ -62,7 +65,7 @@
     width: 250px;
     height: 100vh;
     margin: 0;
-    background-color: var(--color-quintary-light);
+    overflow: scroll
 }
 
 .arrow_menu {
@@ -72,7 +75,8 @@
 }
 
 .active_movile {
-    width: 120%;
+    z-index: 9;
+    width: 80%;
     height: 50px;
     padding: 10px 30px 10px 10px;
     clip-path: polygon(100% 0%, 83% 50%, 100% 100%, 0 100%, 0 0);
