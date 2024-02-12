@@ -4,7 +4,11 @@ import s from './news.module.css';
 const News = () => {
     return (
         <section className={s.news}>
-            Proximamente sección de novedades
+            <div className={s.decoration_background}>
+                <div className={s.intro}>
+                    Próximamente sección de novedades
+                </div>
+            </div>
         </section>
     )
 

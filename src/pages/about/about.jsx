@@ -4,7 +4,11 @@ import s from './about.module.css';
 const About = () => {
     return (
         <section className={s.about}>
-            Proximamente sección sobre nosotros
+            <div className={s.decoration_background}>
+                <div className={s.intro}>
+                    Próximamente sección sobre nosotros
+                </div>
+            </div>
         </section>
     )
 };
