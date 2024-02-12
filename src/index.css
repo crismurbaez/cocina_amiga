@@ -37,4 +37,9 @@ html {
    se ubican debajo
   */
   --margin-top-two: 650px;
+
+  /* sección contactos */
+  --height-top-contact: 300px;
+  /* para el formulario */
+  --margin-top-contact: 400px
 }
