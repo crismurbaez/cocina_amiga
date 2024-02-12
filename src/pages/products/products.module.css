@@ -3,7 +3,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: var(--margin-top-two);
+    margin-top: var(--margin-top-contact);
+}
+
+.decoration_background {
+    z-index: 1;
+    position: absolute;
+    top: var(--top-first);
+    width: 100%;
+    height: var(--height-top-contact);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: repeating-linear-gradient(90deg,
+            var(--color-secundary-light) 0 50px,
+            var(--color-tertiary-light) 40px 90px);
+    /* mejorar la ondulación y hacerla más suave, tengo que poner
+     los centros de los círculos más corridos
+    puedo hacer un creador de css propio para esto
+    */
+    --mask:
+        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
+        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
+        radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
+        radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.intro {
+    padding: 50px 30px 0px 30px;
+    font-family: var(--font-one);
+    font-size: 50px;
+    color: var(--color-text-secundary-light)
 }
 
 .cards {
@@ -101,4 +134,10 @@
     background-color: rgba(255, 255, 255, 0.4);
     font-family: var(--font-three);
     font-size: 20px;
+}
+
+@media (max-width: 750px) {
+    .intro {
+        font-size: 40px;
+    }
 }

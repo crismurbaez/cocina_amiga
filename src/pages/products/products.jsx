@@ -42,10 +42,13 @@ const Products = () => {
     ])
     return (
         <div className={s.products}>
-
-            <Carousel></Carousel>
+            <div className={s.decoration_background}>
+                <div className={s.intro}>
+                    Ya que estás aquí, elegí uno de nuestros productos y...
+                </div>
+            </div>
             <section className={s.cards}>
-                <h1 className={s.title_cards}>Despertá tus sentidos con un festín de sabores</h1>
+                <h1 className={s.title_cards}>...despertá tus sentidos con un festín de sabores</h1>
                 <div className={s.detail_cards}>
                     ¿Buscás algo más que una simple comida? En nuestro espacio te invitamos
                     a un viaje de placer para tus sentidos con nuestras deliciosas tortas,
