@@ -7,7 +7,7 @@
 }
 
 /* -------------movile-------------- */
-.movile {
+.mobile {
     position: relative;
     z-index: 5;
     display: none;
@@ -64,7 +64,7 @@
     flex-direction: column;
     width: 250px;
     height: 100vh;
-    margin: 0;
+    padding-bottom: 200px;
     background-color: var(--color-quintary-light);
     overflow-y: scroll;
 }
@@ -80,7 +80,7 @@
     height: 100vh;
 }
 
-.active_movile {
+.active_mobile {
     width: 210px;
     height: 50px;
     padding: 10px 30px 10px 10px;
@@ -172,7 +172,7 @@ luego agregarle la animación del scrolling */
         display: none;
     }
 
-    .movile {
+    .mobile {
         display: flex;
 
     }
@@ -184,7 +184,7 @@ luego agregarle la animación del scrolling */
         display: none;
     }
 
-    .movile {
+    .mobile {
         display: flex;
     }
 }

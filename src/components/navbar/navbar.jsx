@@ -23,7 +23,7 @@ const Navbar = () => {
         { name: 'Usuario', link: '/users', current: false, },
     ])
     const body = document.body;
-    //condicional de abrir o cerrar menu movile
+    //condicional de abrir o cerrar menu mobile
     const [isOpen, setIsOpen] = useState(false);
     // al hacer scroll se modifica el tamaño del logo
     const [prevScrollPos, setPrevScrollPos] = useState(document.documentElement.scrollTop);
@@ -66,8 +66,8 @@ const Navbar = () => {
     return (
         <nav className={s.container_navbar}>
             <div >
-                {/* menu movile */}
-                <div className={s.movile}>
+                {/* menu mobile */}
+                <div className={s.mobile}>
                     <div className={s.position_menu}>
                         <div onClick={() => openMenu()} className={s.menu_hamburger}>
                             <div className={s.menu_image}></div>
@@ -96,11 +96,11 @@ const Navbar = () => {
                                 return (
                                     <div className={s.container_element_menu}>
                                         <div
-                                            key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
+                                            key={index + 1} className={[nav.current ? s.active_mobile : s.link]} >
                                             <Link
                                                 name={nav.name}
                                                 onClick={(e) => navbarClick(index, e.target)}
-                                                className={[nav.current ? s.active_movile : s.link]}
+                                                className={[nav.current ? s.active_mobile : s.link]}
                                                 to={nav.link}>
                                                 {nav.name}
                                             </Link>
