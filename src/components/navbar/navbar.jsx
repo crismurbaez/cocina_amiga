@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+
 import { Link } from 'react-router-dom';
 import s from './navbar.module.css';
 
@@ -21,10 +22,12 @@ const Navbar = () => {
         { name: 'Contacto', link: '/contact', current: false, },
         { name: 'Usuario', link: '/users', current: false, },
     ])
-    //considional de abrir o cerrar menu movile
+    const body = document.body;
+    //condicional de abrir o cerrar menu movile
     const [isOpen, setIsOpen] = useState(false);
-    // al hacer scroll se oculta el menu movile
+    // al hacer scroll se modifica el tamaño del logo
     const [prevScrollPos, setPrevScrollPos] = useState(document.documentElement.scrollTop);
+
 
     const navbarClick = (index, event) => {
         console.log(index);
@@ -32,19 +35,19 @@ const Navbar = () => {
             i === index
                 ? { ...item, current: true }
                 : { ...item, current: false })));
+        body.style.overflow = 'scroll';
         setIsOpen(false);
     };
 
-
-    // por ahora se cierra solamente si hago click dentro del sidebar
-    // hacer que se cierre cuando hago click por fuera
     const closeMenu = (event) => {
         if (event.button === 0) {
+            body.style.overflow = 'scroll';
             setIsOpen(false);
         }
     };
 
     const openMenu = () => {
+        body.style.overflow = 'hidden';
         setIsOpen(true)
     };
 
@@ -54,11 +57,8 @@ const Navbar = () => {
         setPrevScrollPos(currentScrollPos);
     };
 
-    // useEffect(() => {
-    //     console.log(prevScrollPos);
-    // }, [prevScrollPos]);
-
     useEffect(() => {
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -94,15 +94,17 @@ const Navbar = () => {
 
                             {navigation.map((nav, index) => {
                                 return (
-                                    <div
-                                        key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
-                                        <Link
-                                            name={nav.name}
-                                            onClick={(e) => navbarClick(index, e.target)}
-                                            className={[nav.current ? s.active_movile : s.link]}
-                                            to={nav.link}>
-                                            {nav.name}
-                                        </Link>
+                                    <div className={s.container_element_menu}>
+                                        <div
+                                            key={index + 1} className={[nav.current ? s.active_movile : s.link]} >
+                                            <Link
+                                                name={nav.name}
+                                                onClick={(e) => navbarClick(index, e.target)}
+                                                className={[nav.current ? s.active_movile : s.link]}
+                                                to={nav.link}>
+                                                {nav.name}
+                                            </Link>
+                                        </div>
                                     </div>
                                 )
                             })}

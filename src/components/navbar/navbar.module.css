@@ -38,24 +38,25 @@
 }
 
 .back_sidebar {
-    z-index: 7;
+    z-index: 10;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .container_sidebar {
-    z-index: 8;
+    z-index: 11;
     position: absolute;
     top: 0px;
     left: 0px;
     transform: translateX(-200%);
     transition: transform 1s ease-out;
-    background-color: var(--color-quintary-light);
+    background-color: transparent;
+    width: 350px;
 
 }
 
@@ -65,7 +66,8 @@
     width: 250px;
     height: 100vh;
     margin: 0;
-    overflow: scroll
+    background-color: var(--color-quintary-light);
+    overflow-y: scroll;
 }
 
 .arrow_menu {
@@ -74,9 +76,15 @@
     margin-left: 145px;
 }
 
+.container_element_menu {
+    width: 100vw;
+    height: 100vh;
+}
+
 .active_movile {
-    z-index: 9;
-    width: 80%;
+    top: 0;
+    left: 0;
+    width: 210px;
     height: 50px;
     padding: 10px 30px 10px 10px;
     clip-path: polygon(100% 0%, 83% 50%, 100% 100%, 0 100%, 0 0);
