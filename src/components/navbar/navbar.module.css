@@ -88,6 +88,10 @@
     color: var(--color-text-secundary-light);
 }
 
+.void_item {
+    padding: 10px 0px 60px 10px;
+}
+
 /* -------------desktop-------------- */
 .navbar {
     display: flex;

@@ -112,7 +112,7 @@ const Navbar = () => {
                             ya que no lo agrega al container principal 
                             al colocarle un paddig-bottom
                             */}
-                            <div className={s.link}></div>
+                            <div className={s.void_item}></div>
                         </div>
                     </div>
 
