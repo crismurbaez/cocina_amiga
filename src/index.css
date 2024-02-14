@@ -20,6 +20,23 @@ html {
   --font-three: Poiret One;
   --font-four: sans-serif;
 
+  /* decoración de líneas verticales */
+  --decoration-linear: repeating-linear-gradient(90deg,
+      var(--color-secundary-light) 0 50px,
+      var(--color-tertiary-light) 40px 90px);
+  /* mejorar la ondulación y hacerla más suave, tengo que poner
+     los centros de los círculos más corridos
+    puedo hacer un creador de css propio para esto
+    */
+  /* decoración de ondulaciones */
+  --decoration-border-mask: radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
+    radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
+    radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
+    radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
+  /* decorióna de ondulaciones, sólo en la parte superior para footer */
+  --decoration-border-footer-mask: radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 100% repeat-x,
+    radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x;
+
   /* MEDIDAS de HOME debido a position absolute */
   /* variable que indica ubicación y medidas carousel 
     y todas las secciones subsiguientes

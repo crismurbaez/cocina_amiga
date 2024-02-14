@@ -76,7 +76,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div id='sidebar'
+                    <div
                         onClick={closeMenu}
                         style={{ display: isOpen ? 'flex' : 'none' }}
                         className={s.back_sidebar}
@@ -108,6 +108,11 @@ const Navbar = () => {
                                     </div>
                                 )
                             })}
+                            {/* agrego este div como espacio inferior
+                            ya que no lo agrega al container principal 
+                            al colocarle un paddig-bottom
+                            */}
+                            <div className={s.link}></div>
                         </div>
                     </div>
 

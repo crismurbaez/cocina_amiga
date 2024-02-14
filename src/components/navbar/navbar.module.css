@@ -64,7 +64,6 @@
     flex-direction: column;
     width: 250px;
     height: 100vh;
-    padding-bottom: 200px;
     background-color: var(--color-quintary-light);
     overflow-y: scroll;
 }

@@ -2,18 +2,9 @@
     width: 100vw;
     height: 300px;
 
-    background-image: repeating-linear-gradient(90deg,
-            var(--color-secundary-light) 0 50px,
-            var(--color-tertiary-light) 40px 90px);
-    /* mejorar la ondulación y hacerla más suave, tengo que poner
-     los centros de los círculos más corridos
-    puedo hacer un creador de css propio para esto
-    */
-    --mask:
-        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 100% repeat-x,
-        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+    background-image: var(--decoration-linear);
+    -webkit-mask: var(--decoration-border-footer-mask);
+    mask: var(--decoration-border-footer-mask);
 }
 
 .container_footer {

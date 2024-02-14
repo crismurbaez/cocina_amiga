@@ -52,20 +52,9 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    background-image: repeating-linear-gradient(90deg,
-            var(--color-secundary-light) 0 50px,
-            var(--color-tertiary-light) 40px 90px);
-    /* mejorar la ondulación y hacerla más suave, tengo que poner
-     los centros de los círculos más corridos
-    puedo hacer un creador de css propio para esto
-    */
-    --mask:
-        radial-gradient(6px at 25% 0, #0000 98%, #000) 50% 6px/24px 51% repeat-x,
-        radial-gradient(6px at 75% 50%, #000 99%, #0000 101%) top/24px 12px repeat-x,
-        radial-gradient(6px at 75% 100%, #0000 98%, #000) calc(50% + 12px) calc(100% - 6px)/24px 51% repeat-x,
-        radial-gradient(6px at 25% 50%, #000 99%, #0000 101%) calc(50% + 12px) 100%/24px 12px repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+    background-image: var(--decoration-linear);
+    -webkit-mask: var(--decoration-border-mask);
+    mask: var(--decoration-border-mask);
 }
 
 .flechaDerecha {
