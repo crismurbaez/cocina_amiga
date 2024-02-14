@@ -56,8 +56,7 @@
     transform: translateX(-200%);
     transition: transform 1s ease-out;
     background-color: transparent;
-    width: 350px;
-
+    /* width: 250px; */
 }
 
 .sidebar {
@@ -77,13 +76,11 @@
 }
 
 .container_element_menu {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
 }
 
 .active_movile {
-    top: 0;
-    left: 0;
     width: 210px;
     height: 50px;
     padding: 10px 30px 10px 10px;
